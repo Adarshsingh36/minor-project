@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            background-image: url('HISTORIC SITES IN INDIA.png');
+            height: 1200px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #cdf1ff59;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            margin: 1px auto;
+
+        }
+
+        input[type="text"],input[type="date"],input[type="number"],input[type="password"],input[type="image"] {
+           width:380px;
+           border-radius: 11px;
+            border: 1px solid black;
+            padding:10px;
+            margin-bottom: 15px;
+
+        }
+        #image{
+            padding: 11px;
+        margin-bottom: 15px;
+    }
+
+        input[type="submit"]{
+            width:400px;
+            border-radius: 11px;
+            padding:11px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-weight:bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>SIGN IN</h2>
+        <form action="none.php" method="post" onsubmit="return sign_in()" enctype="multipart/form-data" class="input ">
+            Enter your name<input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+            Enter your D.O.B<input type="date" id="DOB" name="DOB" placeholder="Date of Birth" required>
+            Enter your Age<input type="number" id="AGE" name="AGE" placeholder="Age" required>
+            Upload your id <input type="file" id="image" name="image" placeholder="submit a valid id" accept="image" required>
+            Enter your profession<input type="text" id="profession" name="profession" placeholder="profession" required>
+            Enter your username<input type="text" id="username" name="username" placeholder="username"required>
+            Set Password<input type="password" id="password" name="password" placeholder="password" required>
+            Confirm Password<input type="password" id="Confirm password" name=" Confirm password" placeholder=" Confirm Password" required>
+            <input type="submit" value="Sign in"><br><br>
+        </form>
+        <div class="signup-link">
+            already have a account <a href="login.html">login</a>
+        </div>
+        <div class="signup-link">
+            go to home page <button ><a href="home.html"> Go to Homepage</a></button>
+        </div>
+    </div>
+
+    <script>
+        function sign_in() {
+           
+            var passwordInput = document.getElementById('password').value;
+            var cpasswordInput = document.getElementById('Confirm password').value;
+            
+            if (cpasswrod == password)
+            {
+                return true;
+            }
+            else 
+            {
+                alert("the passwords dosen't match")
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
